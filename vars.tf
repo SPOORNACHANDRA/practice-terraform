@@ -1,2 +1,2 @@
 variable "vpc" {}
-variable "az" {}
+#variable "az" {}
