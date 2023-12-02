@@ -3,7 +3,7 @@ module "components"  {
 
   for_each = var.vpc
 
-#  cidr = each.value["cidr"]
+  cidr = each.value["cidr"]
 
 }
 
