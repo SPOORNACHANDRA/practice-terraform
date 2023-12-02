@@ -1,5 +1,2 @@
 variable "vpc" {}
 
-
-
-
