@@ -10,8 +10,8 @@ module "vpc" {
 
 
 
-output "vpc" {
-  #this is printing
-  value = module.vpc
-
-}
+#output "vpc" {
+#  #this is printing
+#  value = module.vpc
+#
+#}
