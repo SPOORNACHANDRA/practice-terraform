@@ -3,6 +3,7 @@ module "vpc" {
   for_each = var.vpc      #this is for how many times i have to iterate
   cidr = each.value["cidr"]
   subnets = each.value["subnets"]
+  default_vpc_id = var.default_vpc_id
 }
 
 
