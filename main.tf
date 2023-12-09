@@ -16,7 +16,8 @@ module "alb" {
   lb_type = each.value["lb_type"]
   internal = each.value["internal"]
   sg_ingress_cidr = each.value["sg_ingress_cidr"]
-  vpc_id =  each.value["internal"] ? : lookup(lookup (module.vpc "main",null),"vpc_id",nill:var.default_vpc_id
+  vpc_id =  each.value["internal"] ? local.vpc_id:var.default_vpc_id
+  subnet
   sg_port = each.value["sg_port"]
   tags = var.tags
   env=var.env

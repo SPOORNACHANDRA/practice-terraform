@@ -36,10 +36,12 @@ alb ={
     lb_type = "application"
     internal  = false
     sg_ingress_cidr = ["0.0.0.0/0"]
+    sg_port = 80
   }
   private ={
     lb_type = "application"
     internal  = true
     sg_ingress_cidr = ["172.31.0.0/16","11.0.0.0/16"]
+    sg_port = 80
   }
 }
