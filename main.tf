@@ -10,19 +10,19 @@ module "vpc" {
   env=var.env
 }
 
-module "alb" {
-  source   = "git::https://github.com/SPOORNACHANDRA/practice-tf-module-alb.git"
-  for_each = var.alb      #this is for how many times i have to iterate
-  lb_type = each.value["lb_type"]
-  internal = each.value["internal"]
-  sg_ingress_cidr = each.value["sg_ingress_cidr"]
-  vpc_id =  each.value["internal"] ? local.vpc_id:var.default_vpc_id
-  subnet
-  sg_port = each.value["sg_port"]
-  tags = var.tags
-  env=var.env
-}
-
+#module "alb" {
+#  source   = "git::https://github.com/SPOORNACHANDRA/practice-tf-module-alb.git"
+#  for_each = var.alb      #this is for how many times i have to iterate
+#  lb_type = each.value["lb_type"]
+#  internal = each.value["internal"]
+#  sg_ingress_cidr = each.value["sg_ingress_cidr"]
+#  vpc_id =  each.value["internal"] ? local.vpc_id:var.default_vpc_id
+#  subnet =
+#  sg_port = each.value["sg_port"]
+#  tags = var.tags
+#  env=var.env
+#}
+#
 
 
 
