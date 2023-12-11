@@ -11,7 +11,7 @@ module "vpc" {
 }
 
 module "alb" {
-  source   = "git::https://github.com/SPOORNACHANDRA/practice-tf-module-alb.git"
+  source   = "git::https://github.com/SPOORNACHANDRA/tf-module-alb.git"
   for_each = var.alb      #this is for how many times i have to iterate
   lb_type = each.value["lb_type"]
   internal = each.value["internal"]
