@@ -23,6 +23,17 @@ module "alb" {
   env=var.env
 }
 
+module "docdb" {
+  source   = "git::https://github.com/SPOORNACHANDRA/tf-module-docdb.git"
+  tags = var.tags
+  env=var.env
+  for_each = var.docdb
+  subnet_ids = local.db_subnets
+
+}
+
+
+
 
 
 
