@@ -36,7 +36,7 @@ alb = {
     lb_type         = "application"
     internal        = false
     sg_ingress_cidr = ["0.0.0.0/0"]
-    sg_port         = 443
+    sg_port         = 80
   }
   private = {
     lb_type         = "application"
@@ -52,6 +52,5 @@ docdb = {
     preferred_backup_window = "07:00-09:00"
     skip_final_snapshot     = true
     engine_version          = "4.0.0"
-#    engine_family           = "docdb4.0"
   }
 }
