@@ -73,7 +73,7 @@ rds = {
   }
 }
 
-ealsticache = {
+elasticache = {
   main = {
     engine           = "redis"
     node_type        =  "cache.t3.micro"
@@ -82,7 +82,5 @@ ealsticache = {
     elasticache_type = "redis"
     family           = "redis6.x"
     port             = 6379
-
-
   }
 }
