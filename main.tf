@@ -58,9 +58,38 @@ module "rds" {
   preferred_backup_window= each.value["preferred_backup_window"]
   instance_count     = each.value["instance_count"]
   instance_class     = each.value["instance_class"]
+}
+
+module "elasticache" {
+  source           = "git::https://github.com/SPOORNACHANDRA/tf-module-elasticache.git"
+  tags             = var.tags
+  env              = var.env
+  for_each         = var.elasticache
+  subnet_ids       = local.db_subnets
+  vpc_id           = local.vpc_id
+  sg_ingress_cidr  = local.app_subnets_cidr
+  engine           = each.value["engine"]
+  node_type        = each.value["node_type"]
+  num_cache_nodes  = each.value["num_cache_nodes"]
+  engine_version   = each.value["engine_version"]
+  elasticache_type = each.value["elasticache_type"]
+  family           = each.value["family"]
+  port             = each.value["family"]
+
+
 
 
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
