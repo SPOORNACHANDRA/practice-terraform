@@ -74,7 +74,7 @@ module "elasticache" {
   engine_version   = each.value["engine_version"]
   elasticache_type = each.value["elasticache_type"]
   family           = each.value["family"]
-  port             = each.value["family"]
+  port             = each.value["port"]
 
 
 
