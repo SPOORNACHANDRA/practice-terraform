@@ -13,7 +13,6 @@ tags = {
   created_by    = "terraform"
 }
 
-
 vpc = {
   main = {
     cidr    = "11.0.0.0/16"
