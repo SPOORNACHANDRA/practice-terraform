@@ -84,3 +84,10 @@ elasticache = {
     engine_version   = "6.2"
   }
 }
+
+elasticache = {
+  main = {
+    ssh_ingress_cidr = ["54.167.97.178/32"]     # this is a bastion or workstation is only allow to ssh
+    instance_type = "t3.small"
+  }
+}
