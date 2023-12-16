@@ -3,7 +3,7 @@ default_vpc_cidr           = "172.31.0.0/16"
 default_vpc_route_table_id = "rtb-0428dc4fcf14ee4d3"
 zone_id= "Z07143353VCC4QLIJE3K9"
 env = "dev"
-ssh_ingress_cidr = ["54.167.97.178/32"]     # this is a bastion or workstation is only allow to ssh
+ssh_ingress_cidr = ["172.31.36.38/32"]     # this is a bastion or workstation is only allow to ssh
 
 
 tags = {
