@@ -12,4 +12,3 @@ variable "rabbitmq" {}
 variable "zone_id" {}
 variable "app" {}
 variable "ssh_ingress_cidr" {}
-variable "alb_name" {}
