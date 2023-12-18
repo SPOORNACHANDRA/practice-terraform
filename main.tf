@@ -89,7 +89,7 @@ module "rabbitmq" {
   vpc_id           = local.vpc_id
   sg_ingress_cidr  = local.app_subnets_cidr
   ssh_ingress_cidr = var.ssh_ingress_cidr
-  instance_type    = each.value["instance_type"]
+  instance_type    = var.ssh_ingress_cidr
 }
 
 
