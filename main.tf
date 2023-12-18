@@ -77,21 +77,21 @@ module "alb" {
 #  engine_version   = each.value["engine_version"]
 #}
 #
-#module "rabbitmq" {
-#  source = "git::https://github.com/SPOORNACHANDRA/tf-module-rabbitmq.git"
-#  tags   = var.tags
-#  env    = var.env
-#  zone_id=var.zone_id
-#
-#  for_each = var.rabbitmq
-#
-#  subnet_ids       = local.db_subnets
-#  vpc_id           = local.vpc_id
-#  sg_ingress_cidr  = local.app_subnets_cidr
-#  ssh_ingress_cidr = var.ssh_ingress_cidr
-#  instance_type           = each.value["instance_type"]
-#}
-#
+module "rabbitmq" {
+  source = "git::https://github.com/SPOORNACHANDRA/tf-module-rabbitmq.git"
+  tags   = var.tags
+  env    = var.env
+  zone_id=var.zone_id
+
+  for_each = var.rabbitmq
+
+  subnet_ids       = local.db_subnets
+  vpc_id           = local.vpc_id
+  sg_ingress_cidr  = local.app_subnets_cidr
+  ssh_ingress_cidr = var.ssh_ingress_cidr
+  instance_type           = each.value["instance_type"]
+}
+
 
 
 module "app" {
