@@ -78,10 +78,10 @@ module "alb" {
 #}
 #
 module "rabbitmq" {
-  source = "git::https://github.com/SPOORNACHANDRA/tf-module-rabbitmq.git"
-  tags   = var.tags
-  env    = var.env
-  zone_id=var.zone_id
+  source  = "git::https://github.com/SPOORNACHANDRA/tf-module-rabbitmq.git"
+  tags    = var.tags
+  env     = var.env
+  zone_id = var.zone_id
 
   for_each = var.rabbitmq
 
@@ -89,33 +89,32 @@ module "rabbitmq" {
   vpc_id           = local.vpc_id
   sg_ingress_cidr  = local.app_subnets_cidr
   ssh_ingress_cidr = var.ssh_ingress_cidr
-  instance_type           = each.value["instance_type"]
+  instance_type    = each.value["instance_type"]
 }
-
 
 
 module "app" {
   source = "git::https://github.com/SPOORNACHANDRA/tf-module-app.git"
 
-  tags   = var.tags
-  env    = var.env
-  zone_id=var.zone_id
+  tags             = var.tags
+  env              = var.env
+  zone_id          = var.zone_id
   ssh_ingress_cidr = var.ssh_ingress_cidr
 
-  for_each = var.app
-  component=each.key
-  port= each.value["port"]
-  instance_type=each.value["instance_type"]
-  desired_capacity   = each.value["desired_capacity"]
-  max_size           = each.value["max_size"]
-  min_size           = each.value["min_size"]
+  for_each         = var.app
+  component        = each.key
+  port             = each.value["port"]
+  instance_type    = each.value["instance_type"]
+  desired_capacity = each.value["desired_capacity"]
+  max_size         = each.value["max_size"]
+  min_size         = each.value["min_size"]
 
 
-  sg_ingress_cidr  = local.app_subnets_cidr
-  vpc_id           = local.vpc_id
-  subnet_ids       = local.app_subnets
+  sg_ingress_cidr = local.app_subnets_cidr
+  vpc_id          = local.vpc_id
+  subnet_ids      = local.app_subnets
 
-  alb_name = lookup(lookup(lookup(module.alb,"private",null),"alb",null),"dns_name",null)
+  alb_name = lookup(lookup(lookup(module.alb, "private", null), "alb", null), "dns_name", null)
 }
 
 
