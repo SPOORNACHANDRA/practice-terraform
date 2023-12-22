@@ -106,15 +106,15 @@ app = {
     lb_priority      = 1
     lb_type          = "public"
   }
-#  catalogue = {
-#    instance_type    = "t3.micro"
-#    port             = 8080
-#    desired_capacity = 1
-#    max_size         = 3
-#    min_size         = 1
-#    lb_priority      = 2
-#    lb_type          = "private"
-#  }
+  catalogue = {
+    instance_type    = "t3.micro"
+    port             = 8080
+    desired_capacity = 1
+    max_size         = 3
+    min_size         = 1
+    lb_priority      = 2
+    lb_type          = "private"
+  }
   user = {
     instance_type    = "t3.micro"
     port             = 8080
