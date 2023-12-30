@@ -236,7 +236,7 @@ module "app" {
   default_vpc_id          = var.default_vpc_id
 
 
-  for_each         = var.app
+  for_each         = var.apps
   component        = each.key
   port             = each.value["port"]
   instance_type    = each.value["instance_type"]
