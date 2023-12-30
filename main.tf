@@ -229,8 +229,8 @@ module "rabbitmq" {
 module "app" {
   source     = "git::https://github.com/SPOORNACHANDRA/tf-module-app.git"
 
-  tags                    = merge(var.tags, each.value["tags"])
   env                     = var.env
+  tags             = var.tags
   zone_id                 = var.zone_id
   ssh_ingress_cidr        = var.ssh_ingress_cidr
   default_vpc_id          = var.default_vpc_id
