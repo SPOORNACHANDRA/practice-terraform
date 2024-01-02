@@ -1,9 +1,9 @@
-default_vpc_id             = "vpc-033b3aa1458aef7b1"
+default_vpc_id             = "vpc-0fac6343d7a175d11"
 default_vpc_cidr           = "172.31.0.0/16"
-default_vpc_route_table_id = "rtb-0428dc4fcf14ee4d3"
-zone_id                    = "Z07143353VCC4QLIJE3K9"
+default_vpc_route_table_id = "rtb-090d55d6faa0a6626"
+zone_id                    = "Z095093821BU1FHHF63BW"
 env                        = "dev"
-ssh_ingress_cidr           = ["172.31.36.38/32"]     # this is a bastion or workstation is only allow to ssh
+ssh_ingress_cidr           = ["50.17.51.110/32"]     # this is a bastion or workstation is only allow to ssh
 
 
 tags = {
