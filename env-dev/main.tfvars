@@ -158,7 +158,7 @@ app = {
     min_size         = 1
     lb_priority      = 6
     lb_type          = "private"
-    parameters       = []
+    parameters       = ["rds"]
 
   }
 }
