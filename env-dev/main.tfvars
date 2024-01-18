@@ -4,7 +4,7 @@ default_vpc_route_table_id = "rtb-090d55d6faa0a6626"
 zone_id                    = "Z095093821BU1FHHF63BW"
 env                        = "dev"
 ssh_ingress_cidr           = ["172.31.44.98/32"]# this is a bastion or workstation is only allow to ssh
-#monitoring_ingress_cidr    = ["172.31.43.177/32"]
+monitoring_ingress_cidr    = ["172.31.35.9/32"]
 
 tags = {
   company_name  = "ABC Tech"
