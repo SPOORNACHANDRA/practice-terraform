@@ -5,7 +5,7 @@ zone_id                    = "Z095093821BU1FHHF63BW"
 env                        = "dev"
 ssh_ingress_cidr           = ["172.31.34.67/32"]# this is a bastion or workstation is only allow to ssh
 monitoring_ingress_cidr    = ["172.31.46.19/32"]
-
+acm_certificate_arn = "certificate arn"
 tags = {
   company_name  = "ABC Tech"
   business_unit = "Ecommerce"

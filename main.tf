@@ -21,6 +21,7 @@ module "alb" {
   sg_port         = each.value["sg_port"]
   tags            = var.tags
   env             = var.env
+  acm_certificate_arn = var.acm_certificate_arn
 }
 
 #module "docdb" {
