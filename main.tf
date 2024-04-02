@@ -93,6 +93,7 @@ module "alb" {
 #  sg_ingress_cidr  = local.app_subnets_cidr
 #  ssh_ingress_cidr = var.ssh_ingress_cidr
 #  instance_type    = each.value["instance_type"]
+#  kms_key_id = var.kms_key_id
 #}
 
 
