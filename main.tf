@@ -107,7 +107,8 @@ module "app" {
   ssh_ingress_cidr = var.ssh_ingress_cidr
   default_vpc_id   = var.default_vpc_id
   monitoring_ingress_cidr = var.monitoring_ingress_cidr
-
+  az = var.az
+  kms_key_id = var.kms_key_id
 
   for_each         = var.app
   component        = each.key
