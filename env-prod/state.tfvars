@@ -1,6 +1,4 @@
-bucket = "tf-state-poorna"
-key    = "prod/terraform.tfstate"
+bucket = "roboshop-project-bucket"
+key    = "dev/terraform.tfstate"
 region = "us-east-1"
-
-
 
