@@ -133,6 +133,13 @@ module "app" {
 
 
 
-
+resource "aws_instance" "load_runner" {
+  ami                    = data.aws_ami.ami.id
+  vpc_security_group_ids = ["sg-0dee954b08055e577"]
+  instance_type          = "t3.medium"
+  tags = {
+    Name = "load-runner"
+  }
+}
 
 
