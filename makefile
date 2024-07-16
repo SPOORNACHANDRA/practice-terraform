@@ -1,3 +1,5 @@
+default:
+	echo None
 dev:
 	git pull
 	rm -rf .terraform
