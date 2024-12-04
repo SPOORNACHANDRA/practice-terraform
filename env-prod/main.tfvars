@@ -1,7 +1,7 @@
-default_vpc_id             = "vpc-0fac6343d7a175d11"
+default_vpc_id             = "vpc-074d8b43ff7a9020c"
 default_vpc_cidr           = "172.31.0.0/16"
-default_vpc_route_table_id = "rtb-090d55d6faa0a6626"
-zone_id                    = "Z095093821BU1FHHF63BW"
+default_vpc_route_table_id = "rtb-0a912ce6b1f56e5a1"
+zone_id                    = "Z050201124IFD7TBJ5IEA"
 env                        = "Prod"
 ssh_ingress_cidr           = ["172.31.37.156/32"]# this is a bastion or workstation is only allow to ssh
 monitoring_ingress_cidr    = ["172.31.46.19/32"]
