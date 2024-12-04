@@ -1,4 +1,4 @@
 bucket = "roboshop-project-bucket"
-key    = "dev/terraform.tfstate"
+key    = "prod/terraform.tfstate"
 region = "us-east-1"
 
