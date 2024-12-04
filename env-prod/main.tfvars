@@ -3,10 +3,10 @@ default_vpc_cidr           = "172.31.0.0/16"
 default_vpc_route_table_id = "rtb-090d55d6faa0a6626"
 zone_id                    = "Z095093821BU1FHHF63BW"
 env                        = "Prod"
-ssh_ingress_cidr           = ["172.31.34.67/32"]# this is a bastion or workstation is only allow to ssh
+ssh_ingress_cidr           = ["172.31.37.156/32"]# this is a bastion or workstation is only allow to ssh
 monitoring_ingress_cidr    = ["172.31.46.19/32"]
-acm_certificate_arn        = "arn:aws:acm:us-east-1:633788536644:certificate/ad9f90f9-1f68-48a2-87d4-d31c6d91a0cc"
-kms_key_id                 = "arn:aws:kms:us-east-1:633788536644:key/dce90622-5a23-4f82-a639-be841f534702"
+# acm_certificate_arn        = "arn:aws:acm:us-east-1:633788536644:certificate/ad9f90f9-1f68-48a2-87d4-d31c6d91a0cc"
+# kms_key_id                 = "arn:aws:kms:us-east-1:633788536644:key/dce90622-5a23-4f82-a639-be841f534702"
 
 tags = {
   company_name  = "ABC Tech"
